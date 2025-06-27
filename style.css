@@ -27,7 +27,7 @@ body {
 /* Botão como imagem */
 .botao-img {
   position: absolute;
-  top: 23%; /* ajuste fino */
+  top: 28.5%; /* ajuste fino */
   left: 50%;
   transform: translateX(-50%);
   width: 200px;
@@ -38,7 +38,7 @@ body {
 /* Vídeo real do YouTube */
 .video-container {
   position: absolute;
-  top: 52%; /* ajuste fino */
+  top: 42%; /* ajuste fino */
   left: 50%;
   transform: translateX(-50%);
   width: 80%;
