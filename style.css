@@ -61,7 +61,7 @@ body {
 }
 
 .logo-loop img {
-  width: 10px; /* ou ajuste baseado no tamanho da imagem */
+  width: 1px; /* ou ajuste baseado no tamanho da imagem */
   animation: slide-left 25s linear infinite;
 }
 
