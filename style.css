@@ -53,7 +53,7 @@ body {
 }
 .logo-loop {
   position: absolute;
-  top: 10%; /*  você pode ajustar isso pra subir/descer */
+  top: 13%; /*  você pode ajustar isso pra subir/descer */
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -61,7 +61,7 @@ body {
 }
 
 .logo-loop img {
-  width: 1600px; /* ou ajuste baseado no tamanho da imagem */
+  width: 1300px; /* ou ajuste baseado no tamanho da imagem */
   animation: slide-left 25s linear infinite;
 }
 
