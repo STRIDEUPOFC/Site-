@@ -53,7 +53,7 @@ body {
 }
 .logo-loop {
   position: absolute;
-  top: 13%; /*  você pode ajustar isso pra subir/descer */
+  top: 19%; /*  você pode ajustar isso pra subir/descer */
   left: 0;
   width: 100%;
   overflow: hidden;
