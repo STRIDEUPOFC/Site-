@@ -27,7 +27,7 @@ body {
 /* Botão como imagem */
 .botao-img {
   position: absolute;
-  top: 28.5%; /* ajuste fino */
+  top: 18.5%; /* ajuste fino */
   left: 50%;
   transform: translateX(-50%);
   width: 200px;
