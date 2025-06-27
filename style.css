@@ -51,3 +51,25 @@ body {
   aspect-ratio: 16 / 9;
   border-radius: 10px;
 }
+.logo-loop {
+  position: absolute;
+  top: 22%; /* você pode ajustar isso pra subir/descer */
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none; /* pra não atrapalhar clique no botão */
+}
+
+.logo-loop img {
+  width: 2000px; /* ou ajuste baseado no tamanho da imagem */
+  animation: slide-left 25s linear infinite;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
