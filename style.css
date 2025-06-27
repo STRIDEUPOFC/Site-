@@ -9,7 +9,6 @@ body {
 .hero {
   position: relative;
   width: 100%;
-  height: auto;
 }
 
 .bg-img {
@@ -17,12 +16,22 @@ body {
   display: block;
 }
 
-/* Botão posicionado por cima */
+/* Camada sobre a imagem */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* evita bugs de clique fora dos elementos */
+}
+
+/* Botão posicionado */
 .catalogo-btn {
   position: absolute;
-  top: 43%; /* ajuste fino baseado na imagem */
+  top: 33%;   /* AJUSTA AQUI */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   background: #000;
   color: #fff;
   padding: 14px 30px;
@@ -31,17 +40,18 @@ body {
   border: 2px solid white;
   border-radius: 50px;
   text-decoration: none;
+  pointer-events: auto;
 }
 
-/* Player do YouTube no local certo */
+/* Vídeo posicionado */
 .video-container {
   position: absolute;
-  top: 54%; /* ajuste fino baseado na imagem */
+  top: 45%;  /* AJUSTA AQUI */
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translateX(-50%);
   width: 80%;
   max-width: 400px;
-  height: auto;
+  pointer-events: auto;
 }
 
 .video-container iframe {
@@ -49,4 +59,3 @@ body {
   aspect-ratio: 16 / 9;
   border-radius: 10px;
 }
-
