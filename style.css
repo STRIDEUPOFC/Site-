@@ -1,8 +1,8 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #000;
   font-family: Arial, sans-serif;
-  background: #000;
   overflow-x: hidden;
 }
 
@@ -16,37 +16,29 @@ body {
   display: block;
 }
 
-/* Camada sobre a imagem */
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none; /* evita bugs de clique fora dos elementos */
 }
 
-/* Botão posicionado */
-.catalogo-btn {
+/* Botão como imagem */
+.botao-img {
   position: absolute;
-  top: 33%;   /* AJUSTA AQUI */
+  top: 33%; /* ajuste fino */
   left: 50%;
   transform: translateX(-50%);
-  background: #000;
-  color: #fff;
-  padding: 14px 30px;
-  font-size: 18px;
-  font-weight: bold;
-  border: 2px solid white;
-  border-radius: 50px;
-  text-decoration: none;
+  width: 200px;
+  max-width: 80%;
   pointer-events: auto;
 }
 
-/* Vídeo posicionado */
+/* Vídeo real do YouTube */
 .video-container {
   position: absolute;
-  top: 45%;  /* AJUSTA AQUI */
+  top: 52%; /* ajuste fino */
   left: 50%;
   transform: translateX(-50%);
   width: 80%;
