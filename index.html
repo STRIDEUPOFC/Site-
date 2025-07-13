@@ -25,28 +25,86 @@
       <div class="video-container">
         <iframe src="https://www.youtube.com/embed/gSWFF1dQTIs" frameborder="0" allowfullscreen></iframe>
       </div>
-     <!-- Carrossel de Clientes (somente imagens roláveis) -->
-<div style="margin-top: 630px;">
-  <div style="overflow-x: auto; white-space: nowrap; padding: 20px; scroll-snap-type: x mandatory;">
+     <!-- Carrossel de Clientes com visualização em tela cheia -->
+<div style="margin-top: 130px;">
+  <div style="overflow-x: auto; white-space: nowrap; padding: 20px; scroll-snap-type: x mandatory; scrollbar-width: none;" onwheel="this.scrollLeft += event.deltaY;">
     <div style="display: flex; gap: 16px;">
       
-      <div style="flex: 0 0 auto; scroll-snap-align: start;">
-        <img src="img/IMG_9685.jpeg" alt="Cliente 1" style="width: 160px; height: 160px; object-fit: cover; border-radius: 12px; display: block;">
-      </div>
-
-      <div style="flex: 0 0 auto; scroll-snap-align: start;">
-        <img src="img/IMG_9686.jpeg" alt="Cliente 2" style="width: 160px; height: 160px; object-fit: cover; border-radius: 12px; display: block;">
-      </div>
-
-      <div style="flex: 0 0 auto; scroll-snap-align: start;">
-        <img src="img/IMG_9685.jpeg" alt="Cliente 3" style="width: 160px; height: 160px; object-fit: cover; border-radius: 12px; display: block;">
-      </div>
-
-      <!-- Adicione mais imagens abaixo copiando o bloco acima -->
+      <img src="img/IMG_9685.jpeg" alt="Cliente 1" class="carousel-img">
+      <img src="img/IMG_9686.jpeg" alt="Cliente 2" class="carousel-img">
+      <img src="img/IMG_9685.jpeg" alt="Cliente 3" class="carousel-img">
+      <!-- Adicione mais imagens aqui -->
 
     </div>
   </div>
 </div>
+
+<!-- Modal oculto -->
+<div id="imgModal" class="modal" onclick="closeModal()">
+  <img id="modalImg" class="modal-content">
+</div>
+
+<!-- Estilo -->
+<style>
+  .carousel-img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    cursor: pointer;
+    display: block;
+  }
+
+  /* Ocultar scrollbar no Chrome */
+  div::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Modal */
+  .modal {
+    display: none; /* Oculto por padrão */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 0 20px black;
+  }
+
+  .modal.open {
+    display: flex;
+  }
+</style>
+
+<!-- Script -->
+<script>
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImg");
+
+  document.querySelectorAll(".carousel-img").forEach(img => {
+    img.addEventListener("click", () => {
+      modalImg.src = img.src;
+      modal.classList.add("open");
+    });
+  });
+
+  function closeModal() {
+    modal.classList.remove("open");
+  }
+</script>
+
 
 
 
