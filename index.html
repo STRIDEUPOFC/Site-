@@ -28,11 +28,11 @@
      <!-- Carrossel de Clientes com visualização em tela cheia -->
 <div style="margin-top: 630px;">
   <div style="overflow-x: auto; white-space: nowrap; padding: 20px; scroll-snap-type: x mandatory; scrollbar-width: none;" onwheel="this.scrollLeft += event.deltaY;">
-    <div style="display: flex; gap: 16px;">
+    <div style="display: flex; gap: 8px;"> <!-- gap menor -->
       
       <img src="img/IMG_9685.jpeg" alt="Cliente 1" class="carousel-img">
       <img src="img/IMG_9686.jpeg" alt="Cliente 2" class="carousel-img">
-      <img src="img/IMG_9685.jpeg" alt="Cliente 3" class="carousel-img">
+      <img src="img/IMG_9687.png" alt="Cliente 3" class="carousel-img"> <!-- nova imagem -->
       <!-- Adicione mais imagens aqui -->
 
     </div>
@@ -47,8 +47,8 @@
 <!-- Estilo -->
 <style>
   .carousel-img {
-    width: 160px;
-    height: 160px;
+    width: 200px;              /* Aumentado */
+    height: 200px;             /* Aumentado */
     object-fit: cover;
     border-radius: 12px;
     flex-shrink: 0;
@@ -64,7 +64,7 @@
 
   /* Modal */
   .modal {
-    display: none; /* Oculto por padrão */
+    display: none;
     position: fixed;
     z-index: 9999;
     left: 0;
@@ -104,6 +104,7 @@
     modal.classList.remove("open");
   }
 </script>
+
 
 
 
